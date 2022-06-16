@@ -92,6 +92,7 @@ ggplotly(grafico_estadisticas_policiales)
 ```
 
 #### Gráfico de Cantidad de Delitos por mes del año 
+
 ##### Preparativos 
 ```{r, Delitos por mes}
 estadistica_pormes <- estadisticas_policiales %>% mutate(fecha_mes = lubridate::month(Fecha)) 
@@ -115,8 +116,8 @@ ggplotly (grafico_estadisticas_pormes)
 ```
 
 #### Gráfico de Proporcion del Delito según el Género
+
 ```{r, gráfico de genero}
-# ggplotly - Gráfico de barras apiladas de proporciones
 barra_proporcion_genero <-
   estadisticas_policiales %>%
   ggplot(aes(x = Delito, fill = Genero)) +
